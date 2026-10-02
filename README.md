@@ -1,4 +1,4 @@
-# Optical Phased Array (OPA) Beam-Steering GUI
+# Optical Phased Array (OPA) Beam-Steering Simulator
 
 Interactive Python dashboard for exploring the scalar far-field response of a two-dimensional optical phased array (OPA). The GUI provides real-time control of array geometry, beam-steering angles, individual element radiation pattern, and random phase errors, while visualizing the resulting far-field beam in several complementary forms.
 
