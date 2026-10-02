@@ -171,100 +171,14 @@ sudo apt install python3-tk
 ```
 
 ## Download and Run
-
-### Option 1 — Download ZIP from GitHub
-
-1. Open the repository on GitHub.
-2. Select **Code → Download ZIP**.
-3. Extract the downloaded ZIP file.
-4. Open a terminal or PowerShell window inside the extracted folder.
-5. Create a virtual environment:
-
-```bash
-python -m venv .venv
-```
-
-6. Activate it.
-
-Windows PowerShell:
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-macOS/Linux:
-
-```bash
-source .venv/bin/activate
-```
-
-7. Install the Python dependencies:
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-8. Start the GUI:
-
-```bash
-python opa_gui.py
-```
-
-### Option 2 — Clone with Git
-
-```bash
-git clone https://github.com/YOUR-USERNAME/optical-phased-array-beam-steering-gui.git
-cd optical-phased-array-beam-steering-gui
-python -m venv .venv
-```
-
-Then activate the environment, install `requirements.txt`, and run `python opa_gui.py` as described above.
-
-## Verify the Numerical Model
-
-The script includes three compact checks for basic array behavior, Gaussian element-pattern weighting, and planar steering:
-
-```bash
-python opa_gui.py --check
-```
-
-Expected output:
+1. Download opa_gui.py from this repository.
+2. Make sure Python 3 is installed.
+3. Install the required Python packages:
 
 ```text
-Model checks passed: three-element cancellation, Gaussian weighting, planar steering.
-```
+pip install numpy matplotlib
+```   
 
-## Typical Experiments
-
-Some useful parameter sweeps to explore with the GUI are:
-
-- Increase pitch above `0.5λ` and observe how additional lobes emerge.
-- Increase the steering angle while holding pitch fixed.
-- Compare Uniform and Gaussian element patterns and observe how the element envelope modifies the total radiation pattern.
-- Increase phase-error standard deviation and observe beam degradation and sidelobe changes.
-- Change array size to examine main-lobe narrowing as the effective aperture increases.
-
-## Repository Structure
-
-```text
-optical-phased-array-beam-steering-gui/
-├── opa_gui.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-└── docs/
-    └── images/
-        └── opa_gui_screenshot.png
-```
-
-## Suggested GitHub Repository Description
-
-> Interactive Python GUI for scalar far-field simulation and visualization of 2D optical phased arrays, including beam steering, element patterns, phase errors, phase maps, and far-field intensity plots.
-
-## Suggested GitHub Topics
-
-`optical-phased-array` · `opa` · `beam-steering` · `photonics` · `silicon-photonics` · `array-factor` · `python` · `tkinter` · `numpy` · `matplotlib`
-
-## Notes
-
+4. Run the application:
+## Note
 This project is intended for simulation, visualization, and educational exploration of OPA beam-steering concepts. It should not be interpreted as a complete electromagnetic model of a fabricated OPA device.
